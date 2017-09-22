@@ -2,7 +2,7 @@
 
 This Python script looks into log files with the log statements having a general format as:
 
-2017-08-19 09:45:18,923 [7484] DEBUG <some log statement>
+2017-08-19 09:45:18,923 [7484] DEBUG some_log_statement_here
   
 and creates an output folder in the same parent directory, containing files where all the information is segregated based on the thread ids. Like for instance, in the case above, a file called 7484.txt.
 And the threads which contain at least one ERROR type statement are named as <thread_id>_error.txt.
