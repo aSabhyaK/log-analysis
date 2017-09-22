@@ -1,5 +1,4 @@
 """
-Author: Sabhya Kaushal
 1. create the configuration file which contains the address of a log file.
 2. create an output folder which will contain the thread based files.
 3. loop over the file under consideration and create a map with the thread id
