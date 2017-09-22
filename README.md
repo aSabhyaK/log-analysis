@@ -1,6 +1,6 @@
 # log-analysis
 
-This Python script looks into log files with the log statements having a general format as:
+This Python script looks into a log file with the log statements having a general format as:
 
 2017-08-19 09:45:18,923 [7484] DEBUG some_log_statement_here
   
