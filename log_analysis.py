@@ -10,10 +10,12 @@ import os;
 import re;
 from pathlib import Path;
 
+#fetching the parent folder name from the given file name
 def parent_folder(file):
     reverse = file[::-1];
     return reverse[reverse.index("\\")::][::-1];
 
+#creating a folder
 def create_folder(fqn):
     try:
         #creating a folder in case it does not exist
@@ -23,6 +25,7 @@ def create_folder(fqn):
         print("some issue with folder creation. kindly retry later.")
         sys.exit();
 
+#creating a file
 def create_file(fqn):
     try:
         #opening a file for appending, so if the file exists, data gets appended to it, otherwise it just gets created
@@ -59,16 +62,18 @@ if(os.path.exists(output_folder)):
 
 create_folder(output_folder);
 
-#creating the regex which is to be used to check whether a string starts with a valid timestamp or not
+#creating the regular expression which is to be used to check whether a string starts with a valid timestamp or not
 date_regex = "^2[0-9]{3}-[01][0-9]-[0123][0-9] [012][0-9]:[0-5][0-9]:[0-5][0-9],[0-9]{3}";
-#compiling the pattern
+#compiling the regular expression
 pattern = re.compile(date_regex);
 #reading all the lines of the file under consideration
 lines = open(file, "r").readlines();
 #creating a dictionary to hold the complete data
 dictionary = dict();
+#creating a list which is supposed to contain those thread ids which have at least one ERROR statement within them
 threads_with_errors = [];
 
+#iterating over the log file under consideration
 for line in lines:
     #in case the line is empty, or does not match the date regex; skip the further steps
     if not line or not pattern.match(line):
