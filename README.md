@@ -11,7 +11,7 @@ The fully qualified name of the file which needs to be analysed is supposed to b
 
 More often than not, we are forced to manually analyse multiple threads at the same time, looking for culprit threads which blocked a particular flow from going its natural way. And pouring over a single humongous log file is certainly not an ideal way to do that.
 
-Believe me, I do realize that this is not some rocket-sciencey level code, just something that I whipped up to make my life easier.
+Believe me, I do realize that this is not some rocket-science level code, just something that I whipped up to make my life easier.
 Hope it eases yours too.
 
 Planned updates:
