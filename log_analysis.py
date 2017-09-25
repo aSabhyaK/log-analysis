@@ -10,6 +10,9 @@ import os;
 import re;
 from pathlib import Path;
 
+def index_of_next_space(string, index):
+    return string[index::].index(" ") + index;
+
 #fetching the parent folder name from the given file name
 def get_parent_name(file):
     reverse = file[::-1];
@@ -68,6 +71,11 @@ with open('conf.json', 'r') as f:
 
 #contains the sanitized name of the folder under consideration
 folder = config['folder'].replace("/", "\\");
+#logging levels under consideration
+log_levels = [];
+if 'log_types' in config.keys() and config['log_types']:
+    log_levels = config['log_types'];
+
 
 #in case the specified name does not belong to a directory
 if not os.path.isdir(folder):
@@ -148,4 +156,23 @@ for file in log_files:
         print(thread_file_name + " being populated.");
         with open(thread_file_name, 'a') as f:
             for line in dictionary[key]:
-                f.write(line + "\n");
+                #extract the logging level here
+                closing_square_bracket_index = line.index("]");
+                
+                """
+                Possible logging levels in decreasing order of severity:
+                FATAL
+                ERROR
+                WARN
+                INFO
+                DEBUG
+                TRACE
+                """
+
+                if log_levels:
+                    log_level = line[closing_square_bracket_index + 2:index_of_next_space(line, closing_square_bracket_index + 2):];
+                    if(log_level in log_levels):
+                        f.write(line + "\n");
+                
+                else:
+                    f.write(line + "\n");
