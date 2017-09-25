@@ -20,6 +20,29 @@ Planned updates:
 3. to be able to run on any platform.
 
 Update 1:
+
 It is now possible to specify just the folder name, and have it contain multiple log files within itself.
 The script will create folders as per each of the log file, and put the thread specific files within them.
 The skeleton of configuration file has been modified accordingly (have a look at the revision history of conf.json in case interested).
+
+Update 2:
+
+It is now possible to specify the list of expected logging levels in the configuration file. Here are the possible logging levels, in the decreasing order of severity:
+FATAL
+ERROR
+WARN
+INFO
+DEBUG
+TRACE
+
+Now, here is what the configuration file looks like:
+{
+    "folder": "D:\\logs",
+    "log_types": [
+        "ERROR",
+        "INFO",
+        "DEBUG"
+    ]
+}
+
+So, against the key log_types, the user can specify an array of the log types which she/ he wants to be considered. In case the value corresponding to the key "log_types" is missing or is empty, all the possible log types are considered.
