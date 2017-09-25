@@ -1,3 +1,8 @@
 {
-    "folder": "D:\\logs"
+    "folder": "D:\\logs",
+    "log_types": [
+        "ERROR",
+        "INFO",
+        "DEBUG"
+    ]
 }
