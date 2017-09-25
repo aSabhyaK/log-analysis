@@ -19,3 +19,8 @@ Planned updates:
 2. to be able to specify specific threads in specific log files to avoid the clutter.
 3. to be able to specify the log types belonging to each thread, so that in case the user is not interested in getting the INFO level logs from one particular thread, she/ he is able to do that.
 4. to be able to run on any platform.
+
+Update 1:
+It is now possible to specify just the folder name, and have it contain multiple log files within itself.
+The script will create folders as per each of the log file, and put the thread specific files within them.
+The skeleton of configuration file has been modified accordingly (have a look at the revision history of conf.json in case interested).
