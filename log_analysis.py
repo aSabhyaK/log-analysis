@@ -76,7 +76,6 @@ log_levels = [];
 if 'log_types' in config.keys() and config['log_types']:
     log_levels = config['log_types'];
 
-
 #in case the specified name does not belong to a directory
 if not os.path.isdir(folder):
     print("kindly enter the folder name whose log files are supposed to be analysed");
