@@ -18,6 +18,7 @@ Hope it eases yours too.
 1. to be able to manage multiple log files at the same time.
 2. to be able to specify the log types belonging to each thread, so that in case the user is not interested in getting the INFO level logs from one particular thread, she/ he is able to do that.
 3. to be able to run on any platform.
+4. to be able to specify one/ multiple search terms to be searched within all the log files.
 
 ---
 
