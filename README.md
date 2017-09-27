@@ -2,7 +2,7 @@
 
 This Python script looks into a log file with the log statements having a general format as:
 
-2017-08-19 09:45:18,923 [7484] DEBUG some_log_statement_here
+__2017-08-19 09:45:18,923 [7484] DEBUG some_log_statement_here__
   
 and creates an output folder in the same parent directory, containing files where all the information is segregated based on the thread ids. Like for instance, in the case above, a file called 7484.txt.
 And the threads which contain at least one ERROR type statement are named as <thread_id>_error.txt.
@@ -33,14 +33,10 @@ The skeleton of configuration file has been modified accordingly (have a look at
 ## Update 2:
 
 It is now possible to specify the list of expected logging levels in the configuration file. Here are the possible logging levels, in the decreasing order of severity:  
-FATAL
-ERROR
-WARN
-INFO
-DEBUG
-TRACE  
+FATAL > ERROR > WARN > INFO > DEBUG > TRACE  
 
 Now, here is what the configuration file looks like:  
+```javascript
 {  
     "folder": "D:\\logs",  
     "log_types": [  
@@ -49,5 +45,6 @@ Now, here is what the configuration file looks like:
         "DEBUG"  
     ]  
 }  
+```
   
 So, against the key log_types, the user can specify an array of the log types which she/ he wants to be considered. In case the value corresponding to the key "log_types" is missing or is empty, all the possible log types are considered.
