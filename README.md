@@ -7,7 +7,7 @@ __2017-08-19 09:45:18,923 [7484] DEBUG some_log_statement_here__
 and creates an output folder in the same parent directory, containing files where all the information is segregated based on the thread ids. Like for instance, in the case above, a file called 7484.txt.
 And the threads which contain at least one ERROR type statement are named as <thread_id>_error.txt.
 
-The fully qualified name of the file which needs to be analysed is supposed to be mentioned in the configuration file: conf.json.
+The fully qualified name of the folder which contains all the log files which need to be analysed is supposed to be mentioned in the configuration file: conf.json.
 
 More often than not, we are forced to manually analyse multiple threads at the same time, looking for culprit threads which blocked a particular flow from going its natural way. And pouring over a single humongous log file is certainly not an ideal way to do that.  
 
