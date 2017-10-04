@@ -11,9 +11,6 @@ The fully qualified name of the file which needs to be analysed is supposed to b
 
 More often than not, we are forced to manually analyse multiple threads at the same time, looking for culprit threads which blocked a particular flow from going its natural way. And pouring over a single humongous log file is certainly not an ideal way to do that.  
 
-_Believe me, I do realize that this is not some rocket-science level code, just something that I whipped up to make my life easier.
-Hope it eases yours too._
-
 ## Planned updates:
 1. to be able to manage multiple log files at the same time.
 2. to be able to specify the log types belonging to each thread, so that in case the user is not interested in getting the INFO level logs from one particular thread, she/ he is able to do that.
