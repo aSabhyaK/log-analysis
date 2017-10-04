@@ -12,10 +12,12 @@ The fully qualified name of the folder which contains all the log files which ne
 More often than not, we are forced to manually analyse multiple threads at the same time, looking for culprit threads which blocked a particular flow from going its natural way. And pouring over a single humongous log file is certainly not an ideal way to do that.  
 
 ## Planned updates:
-1. to be able to manage multiple log files at the same time.
-2. to be able to specify the log types belonging to each thread, so that in case the user is not interested in getting the INFO level logs from one particular thread, she/ he is able to do that.
+1. ~~to be able to manage multiple log files at the same time.~~
+2. ~~to be able to specify the log types belonging to each thread, so that in case the user is not interested in getting the INFO level logs from one particular thread, she/ he is able to do that.~~
 3. to be able to run on any platform.
 4. to be able to specify one/ multiple search terms to be searched within all the log files.
+  
+Statements struckthrough (if that is even a word) indicate that those features have been implemented already.
 
 ---
 
