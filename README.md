@@ -16,6 +16,7 @@ More often than not, we are forced to manually analyse multiple threads at the s
 2. ~~to be able to specify the log types belonging to each thread, so that in case the user is not interested in getting the INFO level logs from one particular thread, she/ he is able to do that.~~
 3. to be able to run on any platform.
 4. to be able to specify one/ multiple search terms to be searched within all the log files.
+5. to be able to specify a starting time and an ending time to get the logs in that time period, OR to specify one timestamp (t) and a value (5s, for instance) to get all the logs starting from t - 5s through t + 5s.
   
 Statements struckthrough (if that is even a word) indicate that those features have been implemented already.
 
